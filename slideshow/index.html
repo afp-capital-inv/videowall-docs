@@ -268,6 +268,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#aladdin-metrics" class="md-nav__link">
+    Aladdin Metrics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-images" class="md-nav__link">
+    Upload Images
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -366,6 +380,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#aladdin-metrics" class="md-nav__link">
+    Aladdin Metrics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-images" class="md-nav__link">
+    Upload Images
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -386,13 +414,13 @@
 <p>Permite ejecutar la misma vista que es desplegada en el <strong>VideoWall</strong>. Para acceder a ella, existen 2 links:</p>
 <ul>
 <li><strong>Primary URL</strong>    : <a href="http://sura-10397:8080/slideshow">http://sura-10397:8080/slideshow</a></li>
-<li><strong>Secondary URL</strong>  : <a href="http://sura-10424:8080/slideshow">http://sura-10424:8080/slideshow</a></li>
+<li><strong>Secondary URL</strong>  : <a href="http://sura-10424:8080/slideshow">http://sura-10424:8080/slideshow</a> (activo sólo en contingencia)</li>
 </ul>
 <p><img alt="Slideshow Viewer" src="../assets/slideshow_viewer.png" /></p>
 <p>Tal como se puede observar, esta vista despliega cada <strong>40 segundos</strong> las imágenes alojadas en las siguientes rutas de red:</p>
 <ul>
-<li><strong>Primary PATH</strong>   : <code>\\sura-10397\videowall\slideshow\img\</code></li>
-<li><strong>Secondary PATH</strong> : <code>\\sura-10397\videowall\slideshow\img\</code>
+<li><strong>Primary PATH</strong>   : <code>\\sura-10397\img\</code></li>
+<li><strong>Secondary PATH</strong> : <code>\\sura-10424\img\</code>
 `</li>
 </ul>
 <p>El visualizador además despliega:</p>
@@ -402,13 +430,39 @@
 </ol>
 <h2 id="explorer">Explorer</h2>
 <p>El explorador de imágenes permite revisar todas las imágenes que han sido subidas al <strong>VideoWall</strong></p>
+<ul>
+<li><strong>Primary URL</strong>    : <a href="http://sura-10397:8080/slideshow/explorer">http://sura-10397:8080/slideshow/explorer</a></li>
+<li><strong>Secondary URL</strong>  : <a href="http://sura-10424:8080/slideshow/explorer">http://sura-10424:8080/slideshow/explorer</a> (activo sólo en contingencia)</li>
+</ul>
 <p><img alt="Slideshow Explorer" src="../assets/slideshow_explorer.png" /></p>
 <p>Tal como se puede observar:</p>
 <ul>
-<li>En la esquina superior izquierda, está la <strong>opción de ordenar</strong> las imágenes por nombre o por fecha de última modificación.</li>
+<li>En la esquina superior izquierda está la <strong>opción de ordenar</strong> las imágenes por nombre (Filename) o por fecha de última modificación (Last Modification).</li>
 <li>En la esquina superior derecha se despliega el <strong>número de imágenes subidas</strong>.</li>
 </ul>
 <p><img alt="Slideshow Explorer Details" src="../assets/slideshow_explorer_det.png" /></p>
+<p>Al hacer clic en una imagen, podrán hacer zoom en ésta y recorrerla con los menús destacados a continuación:</p>
+<p><img alt="Slideshow Explorer Zoom" src="../assets/slideshow_explorer_zoom.png" /></p>
+<p>También se puede navegar por las imágenes a través del teclado <code>⭢</code> y <code>⭠</code></p>
+<h2 id="aladdin-metrics">Aladdin Metrics</h2>
+<p>Actualmente se cargan de forma diaria una serie de gráficas de <strong>Aladdin</strong>. De hecho, estos se encuentran desarrollados en el siguiente workspace:</p>
+<p><a href="https://suraam.blackrock.com/apps/explore/?workspace=30934">https://suraam.blackrock.com/apps/explore/?workspace=30934</a></p>
+<p>El proceso de extracción se describe a continuación:</p>
+<ol>
+<li>Se aplica <strong>Dark Mode</strong> al sistema <strong>Aladdin</strong></li>
+<li>Se descargan en formato <code>pdf</code> los reportes desarrollados en el report group <strong>Videowall</strong></li>
+<li>Mediante un proceso automático se extraen las imágenes de los reportes generados, para luego:<ol>
+<li>Ajustar colores para visualización:<ol>
+<li><strong>Background</strong> desde <span style="color:rgb(39,41,46); background-color:rgb(39,41,46);">color</span> a <span style="color:rgb(0,0,0); background-color:rgb(0,0,0);">color</span></li>
+<li><strong>Grid Lines</strong> desde <span style="color:rgb(230,230,230); background-color:rgb(230,230,230);">color</span> a <span style="color:rgb(80,80,80); background-color:rgb(80,80,80);">color</span></li>
+</ol>
+</li>
+<li>Redimensionar a una resolución <mark class="critic"><strong>1920x1080</strong></mark></li>
+</ol>
+</li>
+</ol>
+<h2 id="upload-images">Upload Images</h2>
+<p>Para un despliegue óptimo, se recomienda subir imágenes que tengan un ratio <code>16x9</code>. En otras palabras resoluciones del tipo <code>1600x900</code>, <code>1920x1080</code>, etc.</p>
 
               
             </article>
